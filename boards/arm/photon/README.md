@@ -9,3 +9,8 @@ The Photon is a wireless keyboard from ai03 Design Studio.
 ```
 west build -p -b photon
 ```
+
+TODO: 
+RGB status indicator
+MAC/PC Layer select with toggle switch
+Encoder support
