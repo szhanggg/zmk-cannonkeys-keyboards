@@ -42,7 +42,7 @@
     &trans &trans    &kp UP    &trans  &trans  &trans &trans &trans  &trans   &kp PGUP   &trans   &trans  &trans    &trans
     &trans &kp LEFT  &kp DOWN  &kp RIGHT &trans &trans &trans &trans &kp HOME &kp PGDN &kp END   &trans        &bootloader
     &trans       &trans    &trans    &trans   &trans          &trans          &trans          &trans          &trans   &trans   &trans                 &trans  &trans
-    &trans       &trans   &trans                            &trans                                           &kp PSCRN      &trans      &trans              &mo 2
+    &trans       &trans   &trans                            &trans                                           &kp PSCRN         &trans              &mo 2
             >;
         };
 
@@ -59,7 +59,7 @@
     &bt BT_SEL 0  &trans    &trans    &trans  &trans  &trans &trans &trans  &trans   &trans   &trans   &trans  &trans        &trans
     &bt BT_SEL 1   &trans  &trans  &trans &trans &trans &trans &trans &trans &trans &trans   &trans        &sys_reset
     &bt BT_SEL 2    &trans    &trans    &trans   &trans          &trans          &trans          &trans          &trans   &trans   &trans     &trans  &trans
-    &bt BT_SEL 3  &trans   &trans                            &trans                                      &trans      &trans      &trans               &trans
+    &bt BT_SEL 3  &trans   &trans                            &trans                                      &trans         &trans               &trans
             >;
         };
 
@@ -69,7 +69,7 @@
         compatible = "zmk,combos";
         combo_bt {
             timeout-ms = <50>;
-            key-positions = <61 62>;
+            key-positions = <60 61>;
             bindings = <&mo 2>;
         };
     };
