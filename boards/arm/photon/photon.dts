@@ -71,6 +71,11 @@ RC(4,0) RC(4,1) RC(4,2)                         RC(4,5)                         
             ;
     };
 
+    aliases {
+        led-red = &red_led;
+        led-blue = &blue_led;
+    };
+
     leds {
         compatible = "gpio-leds";
         blue_led: led_0 {
