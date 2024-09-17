@@ -69,11 +69,9 @@ RC(3,0)      RC(3,1)      RC(3,2)       RC(3,4)         RC(3,6)         RC(3,8) 
         compatible = "gpio-leds";
         chg_led: led_0 {
             gpios = <&gpio1 12 GPIO_ACTIVE_HIGH>;
-            label = "Charge LED";
         };
         blue_led: led_1 {
             gpios = <&gpio0 26 GPIO_ACTIVE_HIGH>;
-            label = "Blue LED (Power On)";
         };
     };
 
