@@ -33,7 +33,7 @@
 
         control_layer {
             bindings = <
-    &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3   &trans   &trans     &trans    &trans    &trans    &trans    &trans
+    &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3   &trans   &trans     &trans    &trans    &trans    &trans    &soft_off
     &trans        &trans  &trans  &trans     &trans   &trans   &trans     &trans    &trans    &trans    &bootloader
     &gpc GP_ON 0  &trans  &trans  &trans     &trans   &trans   &trans     &trans              &trans    &trans    &trans
     &gpc GP_OFF 0 &trans  &trans             &trans            &trans               &trans    &trans    &trans

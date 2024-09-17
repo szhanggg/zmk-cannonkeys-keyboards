@@ -63,11 +63,6 @@ RC(3,0)      RC(3,1)      RC(3,2)       RC(3,4)         RC(3,6)         RC(3,8) 
             ;
     };
 
-    aliases {
-        led-blue = &blue_led;
-        led-charge = &chg_led;
-    };
-
     leds: leds {
         compatible = "gpio-leds";
         chg_led: led_0 {
@@ -85,6 +80,24 @@ RC(3,0)      RC(3,1)      RC(3,2)       RC(3,4)         RC(3,6)         RC(3,8) 
         label = "BATTERY";
     };
 
+    keys {
+        compatible = "gpio-keys";
+        soft_off_gpio_key: soft_off_gpio_key {
+            gpios = <&gpio0 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        };
+    };
+
+    wakeup_scan: wakeup_scan {
+        compatible = "zmk,gpio-key-wakeup-trigger";
+        trigger = <&soft_off_gpio_key>;
+        wakeup-source;
+        extra-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>;
+    };
+
+    soft_off_wakers {
+        compatible = "zmk,soft-off-wakeup-sources";
+        wakeup-sources = <&wakeup_scan>;
+    };
 };
 
 &adc {
