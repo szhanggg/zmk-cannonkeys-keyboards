@@ -24,7 +24,6 @@
         zmk,battery = &vbatt;
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
-        zmk,control-gpio = &leds;
     };
 
     default_transform: keymap_transform_0 {
@@ -41,7 +40,6 @@ RC(3,0)      RC(3,1)      RC(3,2)       RC(3,4)         RC(3,6)         RC(3,8) 
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
-        label = "KSCAN";
 
         diode-direction = "col2row";
         row-gpios
@@ -66,9 +64,10 @@ RC(3,0)      RC(3,1)      RC(3,2)       RC(3,4)         RC(3,6)         RC(3,8) 
     };
 
     leds: leds {
-        compatible = "gpio-leds";
+        compatible = "zmk,control-gpio";
         chg_led: led_0 {
             gpios = <&gpio1 12 GPIO_ACTIVE_HIGH>;
+            starting-state-on;
         };
         blue_led: led_1 {
             gpios = <&gpio0 26 GPIO_ACTIVE_HIGH>;
@@ -77,7 +76,6 @@ RC(3,0)      RC(3,1)      RC(3,2)       RC(3,4)         RC(3,6)         RC(3,8) 
 
     vbatt: vbatt {
         compatible = "zmk,battery-nrf-vddh";
-        label = "BATTERY";
     };
 
     keys {
@@ -120,7 +118,6 @@ RC(3,0)      RC(3,1)      RC(3,2)       RC(3,4)         RC(3,6)         RC(3,8) 
     status = "okay";
     cdc_acm_uart: cdc_acm_uart {
         compatible = "zephyr,cdc-acm-uart";
-        label = "CDC_ACM_0";
     };
 };
 
