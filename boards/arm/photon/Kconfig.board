@@ -1,6 +1,0 @@
-# Copyright (c) 2024 CannonKeys LLC
-# SPDX-License-Identifier: MIT
-
-config BOARD_PHOTON
-    bool "photon"
-    depends on SOC_NRF52840_QIAA

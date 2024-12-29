@@ -17,7 +17,7 @@
 #     artifact-name: corne_left_with_logging
 #
 ---
-board: ["photon", "cerberus", "vida", "minimi40"]
+board: []
 include:
   - board: bakeneko60_go
     artifact-name: bakeneko60_go
